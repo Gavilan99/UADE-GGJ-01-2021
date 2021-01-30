@@ -8,12 +8,16 @@ public class Inventory : MonoBehaviour
     public Item currentItem;
     public List<Item> items = new List<Item>();
 
-
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void addItem(Item itemToAdd)
     {
         if (!items.Contains(itemToAdd))
         {
             items.Add(itemToAdd);
+            itemToAdd.transform.parent = transform;
         }
         else
         {

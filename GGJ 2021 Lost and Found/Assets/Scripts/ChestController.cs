@@ -7,6 +7,7 @@ public class ChestController : MonoBehaviour
     public bool isOpen;
     public Item content;
     public Inventory playerInventory;
+    public Animator animator;
 
     public void OpenChest()
     {
@@ -18,6 +19,7 @@ public class ChestController : MonoBehaviour
             playerInventory.addItem(content);
             //playerInventory.currentItem = content;
             isOpen = true;
+            animator.SetBool("isOpen", true);
             Debug.Log("Chest is now open...");
         }
     }
