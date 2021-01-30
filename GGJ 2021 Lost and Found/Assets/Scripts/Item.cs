@@ -5,5 +5,5 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public string itemDescription;
-    public bool isKey;
+    public string itemID;
 }
