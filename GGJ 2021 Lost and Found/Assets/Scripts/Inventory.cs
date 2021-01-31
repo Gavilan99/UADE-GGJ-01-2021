@@ -17,7 +17,6 @@ public class Inventory : MonoBehaviour
         if (!items.Contains(itemToAdd))
         {
             items.Add(itemToAdd);
-            itemToAdd.transform.parent = transform;
         }
         else
         {
